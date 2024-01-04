@@ -64,7 +64,7 @@ button.acc-controls::after {
 }
 
 button.acc-controls::before {
-    background-image: url('./assets/images/icon-minus.svg');
+    background-image: url('../assets/images/icon-minus.svg');
     transform: scale(1);
 }
 
@@ -73,7 +73,7 @@ button.acc-controls.acc-closed::before {
 }
 
 button.acc-controls::after {
-    background-image: url('./assets/images/icon-plus.svg');
+    background-image: url('../assets/images/icon-plus.svg');
 }
 
 button.acc-controls.acc-closed::after {
@@ -116,7 +116,7 @@ section.faq::before {
     left: 0;
     right: 0;
 
-    background-image: url('./assets/images/background-pattern-mobile.svg');
+    background-image: url('../assets/images/background-pattern-mobile.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -161,7 +161,7 @@ ul.accordion>li:not(:last-of-type) {
 @media (min-width: 1024px) {
     section.faq::before {
         height: 35.5%;
-        background-image: url('./assets/images/background-pattern-desktop.svg');
+        background-image: url('../assets/images/background-pattern-desktop.svg');
     }
 
     article.faq {
