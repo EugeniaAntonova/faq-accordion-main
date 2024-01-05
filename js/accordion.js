@@ -19,8 +19,8 @@ const closePanel = (panel) => {
 }
 
 const openPanel = (panel) => {
-    panel.style.maxHeight = `${panel.scrollHeight + PADDING}px`;
-    console.log(panel.scrollHeight);
+    panel.style.maxHeight = `${panel.querySelector('.text').getBoundingClientRect().height + PADDING}px`;
+    console.log(panel.querySelector('.text').getBoundingClientRect().height);
     panel.style.paddingTop = `${PADDING_TOP}px`;
     panel.style.paddingBottom = `${PADDING_BOTTOM}px`;
 }
