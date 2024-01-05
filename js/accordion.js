@@ -18,8 +18,8 @@ const closePanel = (panel) => {
 
 const openPanel = (panel) => {
     panel.style.maxHeight = `${panel.scrollHeight + PADDING_TOP + PADDING_BOTTOM}px`;
-    panel.style.paddingTop = `${PADDING_TOP}`;
-    panel.style.paddingBottom = `${PADDING_BOTTOM}`;
+    panel.style.paddingTop = `${PADDING_TOP}px`;
+    panel.style.paddingBottom = `${PADDING_BOTTOM}px`;
 }
 
 faqList.addEventListener("click", (evt) => {
