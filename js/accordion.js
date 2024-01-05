@@ -63,7 +63,7 @@ faqList.addEventListener("click", (evt) => {
 // openPanel(firstPanel);
 
 for (let i = 1; i <= accordeonControls.length; i++) {
-    acc.classList.add('acc-closed');
+    accordeonControls[i].classList.add('acc-closed');
     let panel = findMyPanel(accordeonControls[i]);
     closePanel(panel);
 }
