@@ -150,7 +150,7 @@ article.faq {
     left: 0;
     height: 100%;
     width: 25px;
-    background-image: url('/assets/images/icon-star.svg');
+    background-image: url('../assets/images/icon-star.svg');
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
