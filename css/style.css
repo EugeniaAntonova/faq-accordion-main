@@ -197,11 +197,11 @@ ul.accordion>li:not(:last-of-type) {
         padding: 24px 70px 24px 0;
         font-size: 18px;
     }
-
-    /* .accordion .panel {
+    
+    .accordion .acc-opened .panel {
         padding-top: 14px;
         padding-bottom: 20px;
-    } */
+    }
 
     .accordion .panel .text {
         line-height: 132%;
