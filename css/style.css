@@ -137,10 +137,23 @@ article.faq {
 }
 
 .main-title {
+    position: relative;
     margin: 0;
     font-size: 32px;
     padding-left: 48px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.main-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 25px;
+    background-image: url('/assets/images/icon-star.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 ul.accordion>li:not(:last-of-type) {
@@ -153,10 +166,10 @@ ul.accordion>li:not(:last-of-type) {
     overflow: hidden;
     transition: max-height .5s ease-out, padding .5s ease-out;
 }
-
+/* 
 .accordion .acc-closed+.panel {
     padding: 0;
-}
+} */
 
 @media (min-width: 1024px) {
     section.faq::before {
@@ -172,19 +185,23 @@ ul.accordion>li:not(:last-of-type) {
 
     .main-title {
         padding-left: 64px;
-        padding-bottom: 16px;
+        margin-bottom: 16px;
         font-size: 55px;
     }
 
+    .main-title::before {
+        width: 40px;
+    }
+
     button.acc-controls {
-        padding: 30px 70px 30px 0;
+        padding: 24px 70px 24px 0;
         font-size: 18px;
     }
 
-    .accordion .panel {
-        padding-top: 16px;
-        padding-bottom: 24px;
-    }
+    /* .accordion .panel {
+        padding-top: 14px;
+        padding-bottom: 20px;
+    } */
 
     .accordion .panel .text {
         line-height: 132%;

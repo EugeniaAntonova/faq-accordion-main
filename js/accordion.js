@@ -9,11 +9,17 @@ const findMyPanel = (item) => {
     return panel;
 }
 
-accordeonControls.forEach((acc) => {
-    acc.classList.add('acc-closed');
-    let panel = findMyPanel(acc);
+const closePanel = (panel) => {
     panel.style.maxHeight = '0';
-})
+    panel.style.paddingTop = '0';
+    panel.style.paddingBottom = '0';
+}
+
+const openPanel = (panel) => {
+    panel.style.maxHeight = `${panel.scrollHeight + PADDING}px`;
+    panel.style.paddingTop = null;
+    panel.style.paddingBottom = null;
+}
 
 faqList.addEventListener("click", (evt) => {
     let item = evt.target.classList.contains('acc-controls') ? evt.target : false;
@@ -25,17 +31,29 @@ faqList.addEventListener("click", (evt) => {
                 let panel = findMyPanel(opened);
                 opened.classList.add('acc-closed');
                 opened.classList.remove('acc-opened');
-                panel.style.maxHeight = '0';
+                closePanel(panel);
             }
         }
         let panel = findMyPanel(item);
         item.classList.toggle('acc-closed');
         item.classList.toggle('acc-opened');
         if (item.classList.contains('acc-closed')) {
-            panel.style.maxHeight = '0';
+            closePanel(panel);
         } else {
-            panel.style.maxHeight = `${panel.scrollHeight + PADDING}px`;
+            openPanel(panel);
         }
     }
 })
 
+// preparing default state for the page
+
+accordeonControls.forEach((acc) => {
+    acc.classList.add('acc-closed');
+    let panel = findMyPanel(acc);
+    closePanel(panel);
+})
+
+const firstPanel = findMyPanel(accordeonControls[0]);
+openPanel(firstPanel);
+accordeonControls[0].classList.remove('acc-closed');
+accordeonControls[0].classList.add('acc-opened');
