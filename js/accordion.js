@@ -1,7 +1,8 @@
 const faqList = document.querySelector('.accordion');
 const accordeonControls = faqList.querySelectorAll('.acc-controls');
 
-const PADDING = screen.width < 1024 ? 32 : 40;
+const PADDING_TOP = 12;
+const PADDING_BOTTOM = 20;
 
 const findMyPanel = (item) => {
     let id = item.getAttribute('aria-controls');
@@ -16,9 +17,9 @@ const closePanel = (panel) => {
 }
 
 const openPanel = (panel) => {
-    panel.style.maxHeight = `${panel.scrollHeight + PADDING}px`;
-    panel.style.paddingTop = null;
-    panel.style.paddingBottom = null;
+    panel.style.maxHeight = `${panel.scrollHeight + PADDING_TOP + PADDING_BOTTOM}px`;
+    panel.style.paddingTop = PADDING_TOP;
+    panel.style.paddingBottom = PADDING_BOTTOM;
 }
 
 faqList.addEventListener("click", (evt) => {
