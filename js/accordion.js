@@ -50,14 +50,22 @@ faqList.addEventListener("click", (evt) => {
 
 // preparing default state for the page
 
-accordeonControls.forEach((acc) => {
+// accordeonControls.forEach((acc) => {
+//     acc.classList.add('acc-closed');
+//     let panel = findMyPanel(acc);
+//     closePanel(panel);
+// })
+
+// const firstPanel = findMyPanel(faqList.querySelector('.acc-controls'));
+// console.log(firstPanel);
+// accordeonControls[0].classList.toggle('acc-closed');
+// accordeonControls[0].classList.toggle('acc-opened');
+// openPanel(firstPanel);
+
+for (let i = 1; i <= accordeonControls.length; i++) {
     acc.classList.add('acc-closed');
     let panel = findMyPanel(acc);
     closePanel(panel);
-})
+}
 
-const firstPanel = findMyPanel(faqList.querySelector('.acc-controls'));
-console.log(firstPanel);
-accordeonControls[0].classList.toggle('acc-closed');
-accordeonControls[0].classList.toggle('acc-opened');
-openPanel(firstPanel);
+accordeonControls[0].classList.add('acc-opened');
