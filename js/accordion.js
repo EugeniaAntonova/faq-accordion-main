@@ -3,7 +3,6 @@ const accordeonControls = faqList.querySelectorAll('.acc-controls');
 
 const PADDING_TOP = 12;
 const PADDING_BOTTOM = 20;
-
 const PADDING = PADDING_TOP + PADDING_BOTTOM;
 
 const findMyPanel = (item) => {
@@ -20,7 +19,6 @@ const closePanel = (panel) => {
 
 const openPanel = (panel) => {
     panel.style.maxHeight = `${panel.querySelector('.text').getBoundingClientRect().height + PADDING}px`;
-    console.log(panel.querySelector('.text').getBoundingClientRect().height);
     panel.style.paddingTop = `${PADDING_TOP}px`;
     panel.style.paddingBottom = `${PADDING_BOTTOM}px`;
 }
@@ -47,20 +45,6 @@ faqList.addEventListener("click", (evt) => {
         }
     }
 })
-
-// preparing default state for the page
-
-// accordeonControls.forEach((acc) => {
-//     acc.classList.add('acc-closed');
-//     let panel = findMyPanel(acc);
-//     closePanel(panel);
-// })
-
-// const firstPanel = findMyPanel(faqList.querySelector('.acc-controls'));
-// console.log(firstPanel);
-// accordeonControls[0].classList.toggle('acc-closed');
-// accordeonControls[0].classList.toggle('acc-opened');
-// openPanel(firstPanel);
 
 for (let i = 1; i < accordeonControls.length; i++) {
     accordeonControls[i].classList.add('acc-closed');
