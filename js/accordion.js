@@ -27,7 +27,6 @@ const openPanel = (panel) => {
 
 faqList.addEventListener("click", (evt) => {
     let item = evt.target.classList.contains('acc-controls') ? evt.target : false;
-    console.log(item);
     let opened = faqList.querySelector('.acc-opened');
     if (item) {
         if (opened) {
@@ -57,8 +56,8 @@ accordeonControls.forEach((acc) => {
     closePanel(panel);
 })
 
-const firstPanel = findMyPanel(accordeonControls[0]);
+const firstPanel = findMyPanel(faqList.querySelector('.acc-controls'));
 console.log(firstPanel);
+accordeonControls[0].classList.toggle('acc-closed');
+accordeonControls[0].classList.toggle('acc-opened');
 openPanel(firstPanel);
-accordeonControls[0].classList.remove('acc-closed');
-accordeonControls[0].classList.add('acc-opened');
