@@ -58,6 +58,7 @@ accordeonControls.forEach((acc) => {
 })
 
 const firstPanel = findMyPanel(accordeonControls[0]);
+console.log(firstPanel);
 openPanel(firstPanel);
 accordeonControls[0].classList.remove('acc-closed');
 accordeonControls[0].classList.add('acc-opened');
